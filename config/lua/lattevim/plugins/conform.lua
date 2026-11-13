@@ -13,6 +13,8 @@ return {
 			},
 		},
 		after = function()
+			local langs = require("lattevim.langs")
+
 			require("conform").setup({
 				default_format_opts = {
 					timeout_ms = 500,
@@ -26,10 +28,11 @@ return {
 						args = { "-" },
 					},
 				},
-				formatters_by_ft = {
-					lua = { "stylua" },
-					nix = { "nixfmt", "keep-sorted" },
-				},
+				formatters_by_ft = vim.tbl_deep_extend(
+					"force",
+					langs.formatters_by_ft(),
+					{ ["*"] = { "keep-sorted" } }
+				),
 				format_on_save = {},
 			})
 		end,

@@ -29,8 +29,8 @@
 
             startPlugins = with pkgs.vimPlugins; [
               lz-n
+              nvim-lspconfig
               # (nvim-treesitter.withPlugins (p: [ p.nix ]))
-              # nvim-lspconfig
             ];
 
             optPlugins = with pkgs.vimPlugins; [
@@ -44,10 +44,11 @@
             ];
 
             extraPackages = with pkgs; [
-              # keep-sorted start
               keep-sorted
+
+              # nix
+              nixd
               nixfmt
-              # keep-sorted end
             ];
           };
         }
