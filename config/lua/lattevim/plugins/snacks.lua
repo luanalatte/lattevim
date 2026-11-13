@@ -7,8 +7,6 @@ end
 return {
 	{
 		"snacks.nvim",
-		lazy = false,
-		priority = 900,
 		after = function()
 			---@type snacks.Config
 			local opts = {

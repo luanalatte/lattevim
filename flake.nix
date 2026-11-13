@@ -35,6 +35,7 @@
 
             optPlugins = with pkgs.vimPlugins; [
               catppuccin-nvim
+              mini-icons
               snacks-nvim
             ];
           };
