@@ -34,9 +34,19 @@
             ];
 
             optPlugins = with pkgs.vimPlugins; [
+              # keep-sorted start
               catppuccin-nvim
+              conform-nvim
               mini-icons
               snacks-nvim
+              # keep-sorted end
+            ];
+
+            extraPackages = with pkgs; [
+              # keep-sorted start
+              keep-sorted
+              nixfmt
+              # keep-sorted end
             ];
           };
         }
