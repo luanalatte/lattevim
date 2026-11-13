@@ -35,6 +35,7 @@
 
             optPlugins = with pkgs.vimPlugins; [
               # keep-sorted start
+              bufferline-nvim
               catppuccin-nvim
               conform-nvim
               mini-icons
