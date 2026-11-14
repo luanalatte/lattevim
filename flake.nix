@@ -48,6 +48,7 @@
             extraPackages = with pkgs; [
               keep-sorted
               wl-clipboard
+              ripgrep
 
               # nix
               nixd
