@@ -1,5 +1,5 @@
 -- order matters
-require("lattevim.config.keybinds")
+require("lattevim.config.keymaps")
 require("lattevim.config.options")
 require("lattevim.config.lsp")
 
