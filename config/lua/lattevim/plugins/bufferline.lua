@@ -16,6 +16,8 @@ return {
 			{ "<leader>bj", "<cmd>BufferLinePick<cr>", desc = "Pick Buffer" },
 		},
 		after = function()
+			local showtabline = vim.opt.showtabline
+
 			require("bufferline").setup({
 				options = {
 					close_command = function(n)
@@ -23,13 +25,14 @@ return {
 					end,
 					right_mouse_command = false,
 					middle_mouse_command = "bdelete! %d",
-					buffer_close_icon = " ",
-					close_icon = " ",
+					show_buffer_close_icons = false,
 					diagnostics = "nvim_lsp",
 					always_show_bufferline = true,
 					offsets = { { filetype = "snacks_layout_box" } },
 				},
 			})
+
+			vim.opt.showtabline = showtabline
 		end,
 	},
 }

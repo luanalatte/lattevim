@@ -17,9 +17,10 @@ return {
 		after = function()
 			require("lualine").setup({
 				options = {
-					globalstatus = true,
+					globalstatus = vim.o.laststatus == 3,
 					component_separators = "",
 					section_separators = { left = "", right = "" },
+					disabled_filetypes = { statusline = { "snacks_dashboard" } },
 				},
 				sections = {
 					lualine_c = {},

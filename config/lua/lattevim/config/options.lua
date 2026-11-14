@@ -16,7 +16,7 @@ vim.opt.list = true -- show some invisible characters (like tabs)
 vim.opt.clipboard = "unnamedplus"
 
 -- status and cmdline
-vim.o.cmdheight = 0
-vim.o.laststatus = 3
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 3
 
 require("vim._core.ui2").enable()

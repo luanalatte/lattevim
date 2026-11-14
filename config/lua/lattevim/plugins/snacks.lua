@@ -56,6 +56,32 @@ return {
 				},
 			}
 
+			-- stop bufferline from showing on the dashboard
+
+			-- vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+			-- 	callback = function()
+			-- 		if vim.bo.filetype == "snacks_dashboard" then
+			-- 			vim.o.showtabline = 0
+			-- 		else
+			-- 			vim.o.showtabline = 2
+			-- 		end
+			-- 	end,
+			-- })
+
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "SnacksDashboardOpened",
+				callback = function()
+					vim.o.showtabline = 0
+				end,
+			})
+
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "SnacksDashboardClosed",
+				callback = function()
+					vim.o.showtabline = 2
+				end,
+			})
+
 			require("snacks").setup(opts)
 
 			Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
