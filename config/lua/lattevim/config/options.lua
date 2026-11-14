@@ -11,6 +11,8 @@ vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 
+vim.opt.list = true -- show some invisible characters (like tabs)
+
 vim.opt.clipboard = "unnamedplus"
 
 -- status and cmdline
