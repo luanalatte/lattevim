@@ -59,7 +59,7 @@ return {
 			require("snacks").setup(opts)
 		end,
 		keys = {
-			{ "<leader><space>", pick("smart"), desc = "Smart find files" },
+			{ "<leader><space>", pick("files"), desc = "Find files" },
 			{ "<leader>/", pick("grep"), desc = "Grep files" },
 			{
 				"<leader>e",
