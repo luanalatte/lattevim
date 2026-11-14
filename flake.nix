@@ -46,6 +46,7 @@
 
             extraPackages = with pkgs; [
               keep-sorted
+              wl-clipboard
 
               # nix
               nixd
