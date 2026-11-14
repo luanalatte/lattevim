@@ -3,7 +3,7 @@ vim.opt.termguicolors = true
 
 -- line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- indentation
 vim.opt.shiftwidth = 2

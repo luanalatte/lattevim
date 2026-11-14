@@ -69,7 +69,8 @@ map(nx, "<", "<gv")
 map(nx, ">", ">gv")
 
 -- Commenting
-map(ni, "<c-/>", "<cmd>normal gcc<cr>", { desc = "Toggle Comment" })
+map(ni, "<C-/>", "<cmd>normal gcc<cr>", { desc = "Toggle Comment" })
+map("v", "<C-/>", "<cmd>normal gc<cr>", { desc = "Toggle Comment" })
 
 -- Code Diagnostics
 local diagnostic_goto = function(next, severity)
@@ -88,7 +89,3 @@ map("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
 map("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
-
--- Toggles
--- Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
--- Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")

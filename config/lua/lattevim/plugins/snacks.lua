@@ -57,6 +57,10 @@ return {
 			}
 
 			require("snacks").setup(opts)
+
+			Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
+			Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
+			Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
 		end,
 		keys = {
 			{ "<leader><space>", pick("files"), desc = "Find files" },

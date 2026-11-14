@@ -22,6 +22,7 @@ return {
 					section_separators = { left = "", right = "" },
 				},
 				sections = {
+					lualine_c = {},
 					lualine_x = { "filetype" },
 					lualine_y = {},
 				},
@@ -35,11 +36,20 @@ return {
 			require("which-key").setup({
 				preset = "helix",
 				spec = {
+					{ "<leader>b", group = "buffer" },
 					{ "<leader>c", group = "code" },
 					{ "<leader>f", group = "file/find" },
-					{ "<leader>b", group = "buffer" },
+					{ "<leader>g", group = "git" },
+					{ "<leader>gh", group = "hunks" },
+					{ "<leader>u", group = "ui" },
 					{ "<leader>q", group = "quit/session" },
 					{ "<leader>w", group = "windows" },
+					{ "[", group = "prev" },
+					{ "]", group = "next" },
+					{ "g", group = "goto" },
+					{ "z", group = "fold" },
+					-- better descriptions
+					{ "gx", desc = "Open with system app" },
 				},
 			})
 		end,
