@@ -38,6 +38,7 @@
               bufferline-nvim
               catppuccin-nvim
               conform-nvim
+              lualine-nvim
               mini-icons
               snacks-nvim
               # keep-sorted end
