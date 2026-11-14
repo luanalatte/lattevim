@@ -41,6 +41,7 @@
               lualine-nvim
               mini-icons
               snacks-nvim
+              which-key-nvim
               # keep-sorted end
             ];
 

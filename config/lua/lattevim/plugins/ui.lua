@@ -28,4 +28,28 @@ return {
 			})
 		end,
 	},
+	{
+		"which-key.nvim",
+		event = "DeferredUIEnter",
+		after = function()
+			require("which-key").setup({
+				preset = "helix",
+				spec = {
+					{ "<leader>c", group = "code" },
+					{ "<leader>f", group = "file/find" },
+					{ "<leader>b", group = "buffer" },
+					{ "<leader>q", group = "quit/session" },
+				},
+			})
+		end,
+		keys = {
+			{
+				"<leader>?",
+				function()
+					require("which-key").show({ global = false })
+				end,
+				desc = "Buffer Keymaps",
+			},
+		},
+	},
 }
