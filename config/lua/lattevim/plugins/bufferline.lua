@@ -21,9 +21,10 @@ return {
 					close_command = function(n)
 						Snacks.bufdelete(n)
 					end,
-					right_mouse_command = function(n)
-						Snacks.bufdelete(n)
-					end,
+					right_mouse_command = false,
+					middle_mouse_command = "bdelete! %d",
+					buffer_close_icon = " ",
+					close_icon = " ",
 					diagnostics = "nvim_lsp",
 					always_show_bufferline = true,
 					offsets = { { filetype = "snacks_layout_box" } },
