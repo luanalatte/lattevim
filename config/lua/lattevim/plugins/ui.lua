@@ -39,6 +39,7 @@ return {
 					{ "<leader>f", group = "file/find" },
 					{ "<leader>b", group = "buffer" },
 					{ "<leader>q", group = "quit/session" },
+					{ "<leader>w", group = "windows" },
 				},
 			})
 		end,
