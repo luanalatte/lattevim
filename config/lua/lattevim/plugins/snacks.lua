@@ -14,6 +14,7 @@ return {
 				picker = { enabled = true },
 				explorer = { enabled = true },
 				indent = { enabled = true },
+				notifier = { enabled = true },
 				dashboard = {
 					enabled = true,
 					preset = {
@@ -101,6 +102,7 @@ return {
 			{ "<leader>ff", pick("files"), desc = "Find files" },
 			{ "<leader>fg", pick("git_files"), desc = "Find git files" },
 			{ "<leader>fr", pick("recent"), desc = "Recent files" },
+			{ "<leader>n", pick("notifications"), desc = "Notification History" },
 		},
 	},
 }

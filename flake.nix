@@ -40,6 +40,8 @@
               conform-nvim
               lualine-nvim
               mini-icons
+              noice-nvim
+              nui-nvim
               snacks-nvim
               which-key-nvim
               # keep-sorted end
