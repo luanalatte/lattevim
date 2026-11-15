@@ -40,6 +40,7 @@
               conform-nvim
               lualine-nvim
               mini-icons
+              mini-pairs
               noice-nvim
               nui-nvim
               snacks-nvim
