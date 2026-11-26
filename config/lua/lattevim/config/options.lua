@@ -1,6 +1,9 @@
 -- true colors
 vim.opt.termguicolors = true
 
+-- typing options
+vim.opt.timeoutlen = 300
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = false
