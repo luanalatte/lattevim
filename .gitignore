@@ -1,2 +1,5 @@
 .direnv/
 .envrc
+
+/todo.txt
+/done.txt
