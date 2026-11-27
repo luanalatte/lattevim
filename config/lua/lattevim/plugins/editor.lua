@@ -38,6 +38,21 @@ return {
 		end,
 	},
 	{
+		"nvim-lint",
+		event = { "BufReadPost", "BufWritePost" },
+		after = function()
+			local lint = require("lint")
+			lint.linters_by_ft = require("lattevim.langs").linters_by_ft()
+
+			vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePost" }, {
+				group = vim.api.nvim_create_augroup("lattevim.lint", { clear = true }),
+				callback = function()
+					lint.try_lint()
+				end,
+			})
+		end,
+	},
+	{
 		"mini.pairs",
 		event = "InsertEnter",
 		after = function()
